@@ -1,2 +1,2 @@
-# Machime_Learnign-Projetos
-Projetos de estudo com Machine Learnig
+# Machime_Learning-Projetos
+Projetos de estudo com Machine Learning
