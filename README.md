@@ -1,2 +1,2 @@
-# Machime_Learning-Projetos
+# Machine_Learning-Projetos
 Projetos de estudo com Machine Learning
