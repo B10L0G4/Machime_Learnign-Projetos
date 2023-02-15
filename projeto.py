@@ -45,6 +45,7 @@ output = {'new_temp': x_test.ravel(),'new_class': y_pred.ravel()}
 
 output = pd.DataFrame(output) #criando um dataframe com o ourput
 
-output.head() #mostra os 5 primeiros valores do dataframe
+#output.head() #mostra os 5 primeiros valores do dataframe
 #output.tail() #mostra os 5 ultimos valores do dataframe
 #output.info() #mostra as informações do dataframe
+output.describe()
