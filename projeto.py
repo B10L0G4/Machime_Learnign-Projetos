@@ -2,6 +2,8 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import LogisticRegression 
+import matplotlib.pyplot as plt
+
 
 
 df= pd.read_csv('./arquivos/temperature.csv')
@@ -39,13 +41,18 @@ y_pred = le.inverse_transform(y_pred)
 #print(y_pred)
 
 #output 
-#output = {'new_temp': x_test.ravel(),             'new_class':y_pred.ravel()} #ravel()transforma o array em uma linha , o output é um dicionario que será usado para criar um dataframe
+output = {'new_temp': x_test.ravel(),'new_class':y_pred.ravel()} #ravel()transforma o array em uma linha , o output é um dicionario que será usado para criar um dataframe
 
-output = {'new_temp': x_test.ravel(),'new_class': y_pred.ravel()}
+output = {'new_temp': x_test.ravel(),'new_class': y_pred.ravel()} 
 
 output = pd.DataFrame(output) #criando um dataframe com o ourput
 
-#output.head() #mostra os 5 primeiros valores do dataframe
-#output.tail() #mostra os 5 ultimos valores do dataframe
+#print(output.head()) #mostra os 5 primeiros valores do dataframe
+#print(output.tail()) #mostra os 5 ultimos valores do dataframe
 #output.info() #mostra as informações do dataframe
-output.describe()
+#print(output.describe())
+
+output['new_class'].value_counts().plot.bar(figsize=(10,5),rot=0,title="#novos valores gerados")
+
+plt.show()
+
