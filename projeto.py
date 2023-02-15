@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
+from sklearn.linear_model import LogisticRegression 
 
 
 df= pd.read_csv('./arquivos/temperature.csv')
@@ -18,3 +19,12 @@ le = LabelEncoder()
 y = le.fit_transform(y.ravel()) #rave() transforma o array em uma linha, fit_transform( transforma os valores em numericos )
 
 print("y:\n",y)
+
+#linear regression é um modelo de regressão linear que é usado para prever valores continuos 
+#a classe LogisticRegression é usada para prever valores discretos, ou seja, valores que não são continuos 
+
+# classificação 
+
+clf = LogisticRegression() # criando o modelo
+clf.fit(x,y) #fit é usado para treinar o modelo 
+
